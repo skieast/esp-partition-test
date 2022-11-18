@@ -92,9 +92,9 @@ void init_spiff() {
 }
 
 void setup() {
-  USBSerial.begin();
+  USBSerial.begin(); 
   while(!USBSerial) {
-    //wait for serial to connect
+    //wait for serial to connect, will hang until connection
   }
   printf("Setup: Initialize SPIFFS\n");
   init_spiff();
